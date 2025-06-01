@@ -255,14 +255,14 @@ def weighted_vote(predictions, weights=None):
         # Default weights based on model reliability
         weights = {
             "Multinomial NB": 1.2,
-            "SVM": 1.3,
-            "Neural Network": 1.2,
+            "SVM": 1.2,
+            "Neural Network": 0.8,
             "KNN": 0.8,  # Reduced weight due to less reliable probabilities
-            "Passive Aggressive": 0.9,
-            "SGD": 1.0,
+            "Passive Aggressive": 1,
+            "SGD": 1.3,
             "Extra Trees": 1.1,
             "Ridge": 0.9,
-            "Perceptron": 0.8
+            "Perceptron": 1.1
         }
     
     weighted_predictions = {}
