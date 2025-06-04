@@ -139,10 +139,10 @@ MODEL_FILES = {
     "Neural Network": os.path.join(MODELS_DIR, 'neural_network_model.joblib'),
     "KNN": os.path.join(MODELS_DIR, 'knn_model.joblib'),
     "Passive Aggressive": os.path.join(MODELS_DIR, 'passive_aggressive_model.joblib'),
-    "SGD": os.path.join(MODELS_DIR, 'sgd_model.joblib'),
-    "Extra Trees": os.path.join(MODELS_DIR, 'extra_trees_model.joblib'),
+    "SGD": os.path.join(MODELS_DIR, 'sgd_model.joblib'),    "Extra Trees": os.path.join(MODELS_DIR, 'extra_trees_model.joblib'),
     "Ridge": os.path.join(MODELS_DIR, 'ridge_model.joblib'),
-    "Perceptron": os.path.join(MODELS_DIR, 'perceptron_model.joblib')
+    "Perceptron": os.path.join(MODELS_DIR, 'perceptron_model.joblib'),
+    "LightGBM": os.path.join(MODELS_DIR, 'lightgbm_model.joblib')
 }
 
 # --- Load Models and Preprocessing Objects ---
@@ -262,7 +262,8 @@ def weighted_vote(predictions, weights=None):
             "SGD": 1.3,
             "Extra Trees": 1.1,
             "Ridge": 0.9,
-            "Perceptron": 1.1
+            "Perceptron": 1.1,
+            "LightGBM": 1.1  # High weight due to typically good performance
         }
     
     weighted_predictions = {}

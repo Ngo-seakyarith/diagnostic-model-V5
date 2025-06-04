@@ -9,6 +9,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
+import lightgbm as lgb
 import joblib
 import os
 import warnings
@@ -118,6 +119,13 @@ base_models = {
         max_iter=1000,
         random_state=RANDOM_STATE,
         tol=1e-3
+    ),
+    "LightGBM": lgb.LGBMClassifier(
+        random_state=RANDOM_STATE,
+        n_estimators=100,
+        learning_rate=0.1,
+        num_leaves=31,
+        verbosity=-1  # Suppress output for cleaner logs
     )
 }
 

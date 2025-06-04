@@ -2,3 +2,4 @@ joblib
 scikit-learn
 numpy
 pandas
+lightgbm
